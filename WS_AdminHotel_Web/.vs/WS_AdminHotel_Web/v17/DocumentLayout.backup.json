@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\RICH\\Desktop\\software 2\\Hotel_BENI Web\\WS_AdminHotel_Web\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{23F08417-9245-42EA-9AC9-C43D2947E414}|WS_AdminHotel_Web.vbproj|c:\\users\\rich\\desktop\\software 2\\hotel_beni web\\ws_adminhotel_web\\ws_hotel_beni.asmx.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{23F08417-9245-42EA-9AC9-C43D2947E414}|WS_AdminHotel_Web.vbproj|solutionrelative:ws_hotel_beni.asmx.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{23F08417-9245-42EA-9AC9-C43D2947E414}|WS_AdminHotel_Web.vbproj|c:\\users\\rich\\desktop\\software 2\\hotel_beni web\\ws_adminhotel_web\\db.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}",
+      "RelativeMoniker": "D:0:0:{23F08417-9245-42EA-9AC9-C43D2947E414}|WS_AdminHotel_Web.vbproj|solutionrelative:db.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "WS_Hotel_Beni.asmx.vb",
+              "DocumentMoniker": "C:\\Users\\RICH\\Desktop\\software 2\\Hotel_BENI Web\\WS_AdminHotel_Web\\WS_Hotel_Beni.asmx.vb",
+              "RelativeDocumentMoniker": "WS_Hotel_Beni.asmx.vb",
+              "ToolTip": "C:\\Users\\RICH\\Desktop\\software 2\\Hotel_BENI Web\\WS_AdminHotel_Web\\WS_Hotel_Beni.asmx.vb",
+              "RelativeToolTip": "WS_Hotel_Beni.asmx.vb",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAUwB0AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-12-17T19:38:19.478Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DB.xsd",
+              "DocumentMoniker": "C:\\Users\\RICH\\Desktop\\software 2\\Hotel_BENI Web\\WS_AdminHotel_Web\\DB.xsd",
+              "RelativeDocumentMoniker": "DB.xsd",
+              "ToolTip": "C:\\Users\\RICH\\Desktop\\software 2\\Hotel_BENI Web\\WS_AdminHotel_Web\\DB.xsd",
+              "RelativeToolTip": "DB.xsd",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003579|",
+              "WhenOpened": "2024-12-17T19:05:33.387Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

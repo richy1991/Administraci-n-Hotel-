@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="8df63f06-5441-4bf1-b54b-58d81c414937" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://localhost:44388/WS_Hotel_Beni.asmx" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="DB.xsd" MetadataType="Schema" ID="b2624c5e-80bf-431d-a19a-18dd034f6313" SourceId="1" SourceUrl="https://localhost:44388/WS_Hotel_Beni.asmx?schema=DB" />
+    <MetadataFile FileName="WS_Hotel_Beni.disco" MetadataType="Disco" ID="db4f16e7-3a1b-40da-ad46-8cc897e1c16a" SourceId="1" SourceUrl="https://localhost:44388/WS_Hotel_Beni.asmx?disco" />
+    <MetadataFile FileName="WS_Hotel_Beni.wsdl" MetadataType="Wsdl" ID="383c1e09-31de-46b5-966a-7e585303f146" SourceId="1" SourceUrl="https://localhost:44388/WS_Hotel_Beni.asmx?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

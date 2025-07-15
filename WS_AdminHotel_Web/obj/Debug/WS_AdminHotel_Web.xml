@@ -1,0 +1,166 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+WS_AdminHotel_Web
+</name>
+</assembly>
+<members>
+<member name="T:WS_AdminHotel_Web.My.MyWebExtension">
+ <summary>
+ Módulo usado para definir las propiedades que están disponibles en el espacio de nombres My para proyectos web.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:WS_AdminHotel_Web.My.MyWebExtension.Computer">
+ <summary>
+ Devuelve información sobre el equipo host.
+ </summary>
+</member>
+<member name="P:WS_AdminHotel_Web.My.MyWebExtension.User">
+ <summary>
+ Devuelve información del usuario web actual.
+ </summary>
+</member>
+<member name="P:WS_AdminHotel_Web.My.MyWebExtension.Request">
+ <summary>
+ Devuelve un objeto Request.
+ </summary>
+</member>
+<member name="P:WS_AdminHotel_Web.My.MyWebExtension.Response">
+ <summary>
+ Devuelve un objeto Response.
+ </summary>
+</member>
+<member name="P:WS_AdminHotel_Web.My.MyWebExtension.Log">
+ <summary>
+ Devuelve el objeto de registro Asp.
+ </summary>
+</member>
+<member name="T:WS_AdminHotel_Web.DB">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:WS_AdminHotel_Web.DB.VClienteDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:WS_AdminHotel_Web.DB.HabitacionesDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:WS_AdminHotel_Web.DB.ReservacionesDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:WS_AdminHotel_Web.DB.vHabitacionesDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:WS_AdminHotel_Web.DB.VClienteRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:WS_AdminHotel_Web.DB.HabitacionesRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:WS_AdminHotel_Web.DB.ReservacionesRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:WS_AdminHotel_Web.DB.vHabitacionesRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:WS_AdminHotel_Web.DB.VClienteRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:WS_AdminHotel_Web.DB.HabitacionesRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:WS_AdminHotel_Web.DB.ReservacionesRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:WS_AdminHotel_Web.DB.vHabitacionesRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:WS_AdminHotel_Web.DBTableAdapters.VClienteTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:WS_AdminHotel_Web.DBTableAdapters.HabitacionesTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:WS_AdminHotel_Web.DBTableAdapters.ReservacionesTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:WS_AdminHotel_Web.DBTableAdapters.vHabitacionesTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:WS_AdminHotel_Web.DBTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:WS_AdminHotel_Web.DBTableAdapters.TableAdapterManager.UpdateUpdatedRows(WS_AdminHotel_Web.DB,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:WS_AdminHotel_Web.DBTableAdapters.TableAdapterManager.UpdateInsertedRows(WS_AdminHotel_Web.DB,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:WS_AdminHotel_Web.DBTableAdapters.TableAdapterManager.UpdateDeletedRows(WS_AdminHotel_Web.DB,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:WS_AdminHotel_Web.DBTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:WS_AdminHotel_Web.DBTableAdapters.TableAdapterManager.UpdateAll(WS_AdminHotel_Web.DB)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:WS_AdminHotel_Web.DBTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:WS_AdminHotel_Web.DBTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+</members>
+</doc>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://tempuri.org/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:import namespace="http://tempuri.org/DB.xsd" />
+      <s:import schemaLocation="https://localhost:44388/WS_Hotel_Beni.asmx?schema=DB" namespace="http://tempuri.org/DB.xsd" />
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Consultar_Cliente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CI" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Consultar_ClienteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Consultar_ClienteResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/DB.xsd" name="namespace" />
+                <s:attribute fixed="VClienteDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Havitaciones_Disponibles">
+        <s:complexType />
+      </s:element>
+      <s:element name="Havitaciones_DisponiblesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Havitaciones_DisponiblesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/DB.xsd" name="namespace" />
+                <s:attribute fixed="vHabitacionesDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="Consultar_ClienteSoapIn">
+    <wsdl:part name="parameters" element="tns:Consultar_Cliente" />
+  </wsdl:message>
+  <wsdl:message name="Consultar_ClienteSoapOut">
+    <wsdl:part name="parameters" element="tns:Consultar_ClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="Havitaciones_DisponiblesSoapIn">
+    <wsdl:part name="parameters" element="tns:Havitaciones_Disponibles" />
+  </wsdl:message>
+  <wsdl:message name="Havitaciones_DisponiblesSoapOut">
+    <wsdl:part name="parameters" element="tns:Havitaciones_DisponiblesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WS_Hotel_BeniSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Consultar_Cliente">
+      <wsdl:input message="tns:Consultar_ClienteSoapIn" />
+      <wsdl:output message="tns:Consultar_ClienteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Havitaciones_Disponibles">
+      <wsdl:input message="tns:Havitaciones_DisponiblesSoapIn" />
+      <wsdl:output message="tns:Havitaciones_DisponiblesSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WS_Hotel_BeniSoap" type="tns:WS_Hotel_BeniSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Consultar_Cliente">
+      <soap:operation soapAction="http://tempuri.org/Consultar_Cliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Havitaciones_Disponibles">
+      <soap:operation soapAction="http://tempuri.org/Havitaciones_Disponibles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WS_Hotel_BeniSoap12" type="tns:WS_Hotel_BeniSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Consultar_Cliente">
+      <soap12:operation soapAction="http://tempuri.org/Consultar_Cliente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Havitaciones_Disponibles">
+      <soap12:operation soapAction="http://tempuri.org/Havitaciones_Disponibles" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WS_Hotel_Beni">
+    <wsdl:port name="WS_Hotel_BeniSoap" binding="tns:WS_Hotel_BeniSoap">
+      <soap:address location="https://localhost:44388/WS_Hotel_Beni.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WS_Hotel_BeniSoap12" binding="tns:WS_Hotel_BeniSoap12">
+      <soap12:address location="https://localhost:44388/WS_Hotel_Beni.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

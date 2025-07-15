@@ -1,0 +1,187 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+app_Web
+</name>
+</assembly>
+<members>
+<member name="T:app_Web.My.MyWebExtension">
+ <summary>
+ Módulo usado para definir las propiedades que están disponibles en el espacio de nombres My para proyectos web.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:app_Web.My.MyWebExtension.Computer">
+ <summary>
+ Devuelve información sobre el equipo host.
+ </summary>
+</member>
+<member name="P:app_Web.My.MyWebExtension.User">
+ <summary>
+ Devuelve información del usuario web actual.
+ </summary>
+</member>
+<member name="P:app_Web.My.MyWebExtension.Request">
+ <summary>
+ Devuelve un objeto Request.
+ </summary>
+</member>
+<member name="P:app_Web.My.MyWebExtension.Response">
+ <summary>
+ Devuelve un objeto Response.
+ </summary>
+</member>
+<member name="P:app_Web.My.MyWebExtension.Log">
+ <summary>
+ Devuelve el objeto de registro Asp.
+ </summary>
+</member>
+<member name="T:app_Web.WSHotelBeni.DB">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:app_Web.WSHotelBeni.DB.VClienteDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:app_Web.WSHotelBeni.DB.HabitacionesDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:app_Web.WSHotelBeni.DB.ReservacionesDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:app_Web.WSHotelBeni.DB.vHabitacionesDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:app_Web.WSHotelBeni.DB.VClienteRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:app_Web.WSHotelBeni.DB.HabitacionesRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:app_Web.WSHotelBeni.DB.ReservacionesRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:app_Web.WSHotelBeni.DB.vHabitacionesRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:app_Web.WSHotelBeni.DB.VClienteRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:app_Web.WSHotelBeni.DB.HabitacionesRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:app_Web.WSHotelBeni.DB.ReservacionesRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:app_Web.WSHotelBeni.DB.vHabitacionesRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="F:app_Web.RegistrarHospedajeWF._form1">
+<summary>
+Control form1.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:app_Web.RegistrarHospedajeWF._CITxt">
+<summary>
+Control CITxt.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:app_Web.RegistrarHospedajeWF._BtnBuscar">
+<summary>
+Control BtnBuscar.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:app_Web.RegistrarHospedajeWF._ClienteTxt">
+<summary>
+Control ClienteTxt.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:app_Web.RegistrarHospedajeWF._HabitacionDropdown">
+<summary>
+Control HabitacionDropdown.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:app_Web.RegistrarHospedajeWF._NochesTxt">
+<summary>
+Control NochesTxt.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:app_Web.RegistrarHospedajeWF._ComentariosTxt">
+<summary>
+Control ComentariosTxt.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:app_Web.RegistrarHospedajeWF._BtnLimpiar">
+<summary>
+Control BtnLimpiar.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:app_Web.RegistrarHospedajeWF._BtnRegistrarHospedaje">
+<summary>
+Control BtnRegistrarHospedaje.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+</members>
+</doc>
