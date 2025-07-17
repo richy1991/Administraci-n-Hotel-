@@ -192,10 +192,33 @@ Public Class WS_Hotel_Beni
     End Function
 
     <WebMethod()>
-    Public Function Generar_Factura(IDHospedaje As Integer) As String
-        ' Aquí iría la lógica para generar la factura.
-        ' Por ahora, solo devolveremos un mensaje.
-        Return "Factura generada para el hospedaje " & IDHospedaje.ToString()
+    Public Function ObtenerTodosLosClientes() As DB.VClienteDataTable
+        Dim adap As New DBTableAdapters.VClienteTableAdapter
+        Return adap.GetData()
+    End Function
+
+    <WebMethod()>
+    Public Function ObtenerTodasLasHabitaciones() As DB.vHabitacionesDataTable
+        Dim adap As New DBTableAdapters.vHabitacionesTableAdapter
+        Return adap.GetData()
+    End Function
+
+    <WebMethod()>
+    Public Function ObtenerTodasLasReservaciones() As DB.ReservacionesDataTable
+        Dim adap As New DBTableAdapters.ReservacionesTableAdapter
+        Return adap.GetData()
+    End Function
+
+    <WebMethod()>
+    Public Function ObtenerTodosLosHospedajes() As DB.HospedajeDataTable
+        Dim adap As New DBTableAdapters.HospedajeTableAdapter
+        Return adap.GetData()
+    End Function
+
+    <WebMethod()>
+    Public Function ObtenerTodosLosPagos() As DB.PagosDataTable
+        Dim adap As New DBTableAdapters.PagosTableAdapter
+        Return adap.GetData()
     End Function
 
 
