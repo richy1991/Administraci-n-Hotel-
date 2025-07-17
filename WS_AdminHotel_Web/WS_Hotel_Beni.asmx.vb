@@ -30,6 +30,100 @@ Public Class WS_Hotel_Beni
     End Function
 
     <WebMethod()>
+    Public Function Registrar_Cliente(CI As String, Nombre As String, Apellido As String, Telefono As String, Email As String) As String
+        Try
+            Dim adap As New DBTableAdapters.ClienteTableAdapter
+            adap.Insert(CI, Nombre, Apellido, Telefono, Email)
+            Return "Cliente registrado correctamente."
+        Catch ex As Exception
+            Return "Error al registrar el cliente: " & ex.Message
+        End Try
+    End Function
+
+    <WebMethod()>
+    Public Function Actualizar_Cliente(CI As String, Nombre As String, Apellido As String, Telefono As String, Email As String) As String
+        Try
+            Dim adap As New DBTableAdapters.ClienteTableAdapter
+            adap.ActualizarCliente(Nombre, Apellido, Telefono, Email, CI)
+            Return "Cliente actualizado correctamente."
+        Catch ex As Exception
+            Return "Error al actualizar el cliente: " & ex.Message
+        End Try
+    End Function
+
+    <WebMethod()>
+    Public Function Registrar_Habitacion(Numero As String, Tipo As String, Precio As Decimal, Estado As String) As String
+        Try
+            Dim adap As New DBTableAdapters.HabitacionesTableAdapter
+            adap.Insert(Numero, Tipo, Precio, Estado)
+            Return "Habitación registrada correctamente."
+        Catch ex As Exception
+            Return "Error al registrar la habitación: " & ex.Message
+        End Try
+    End Function
+
+    <WebMethod()>
+    Public Function Actualizar_Habitacion(Numero As String, Tipo As String, Precio As Decimal, Estado As String) As String
+        Try
+            Dim adap As New DBTableAdapters.HabitacionesTableAdapter
+            adap.ActualizarHabitacion(Tipo, Precio, Estado, Numero)
+            Return "Habitación actualizada correctamente."
+        Catch ex As Exception
+            Return "Error al actualizar la habitación: " & ex.Message
+        End Try
+    End Function
+
+    <WebMethod()>
+    Public Function Eliminar_Habitacion(Numero As String) As String
+        Try
+            Dim adap As New DBTableAdapters.HabitacionesTableAdapter
+            adap.EliminarHabitacion(Numero)
+            Return "Habitación eliminada correctamente."
+        Catch ex As Exception
+            Return "Error al eliminar la habitación: " & ex.Message
+        End Try
+    End Function
+
+    <WebMethod()>
+    Public Function Habitaciones_Ocupadas() As DB.vHabitacionesDataTable
+        Dim adah As New DBTableAdapters.vHabitacionesTableAdapter
+        Return adah.DevHabOcupada()
+    End Function
+
+    <WebMethod()>
+    Public Function Registrar_Reservacion(CI As String, NumeroHabitacion As String, FechaInicio As DateTime, FechaFin As DateTime) As String
+        Try
+            Dim adap As New DBTableAdapters.ReservacionesTableAdapter
+            adap.Insert(CI, NumeroHabitacion, FechaInicio, FechaFin, 0, "Pendiente", "Ninguna", DateTime.Now)
+            Return "Reservación registrada correctamente."
+        Catch ex As Exception
+            Return "Error al registrar la reservación: " & ex.Message
+        End Try
+    End Function
+
+    <WebMethod()>
+    Public Function Actualizar_Reservacion(ID As Integer, CI As String, NumeroHabitacion As String, FechaInicio As DateTime, FechaFin As DateTime, Estado As String) As String
+        Try
+            Dim adap As New DBTableAdapters.ReservacionesTableAdapter
+            adap.ActualizarReservacion(CI, NumeroHabitacion, FechaInicio, FechaFin, 0, Estado, "Ninguna", DateTime.Now, ID)
+            Return "Reservación actualizada correctamente."
+        Catch ex As Exception
+            Return "Error al actualizar la reservación: " & ex.Message
+        End Try
+    End Function
+
+    <WebMethod()>
+    Public Function Eliminar_Reservacion(ID As Integer) As String
+        Try
+            Dim adap As New DBTableAdapters.ReservacionesTableAdapter
+            adap.EliminarReservacion(ID)
+            Return "Reservación eliminada correctamente."
+        Catch ex As Exception
+            Return "Error al eliminar la reservación: " & ex.Message
+        End Try
+    End Function
+
+    <WebMethod()>
     Public Function Registrar_Hospedaje(CI As String, NumeroHabitacion As String, FechaInicio As DateTime, Noches As Integer) As String
         Try
             ' Validar los parámetros de entrada
@@ -63,6 +157,45 @@ Public Class WS_Hotel_Beni
             ' Manejo general de errores
             Return $"Error general: {ex.Message}"
         End Try
+    End Function
+
+    <WebMethod()>
+    Public Function Registrar_Salida(IDHospedaje As Integer, NumeroHabitacion As String) As String
+        Try
+            Dim adaptadorHospedaje As New DBTableAdapters.HospedajeTableAdapter
+            adaptadorHospedaje.RegistrarSalida(DateTime.Now, IDHospedaje)
+
+            Dim adaptadorHabitaciones As New DBTableAdapters.HabitacionesTableAdapter
+            adaptadorHabitaciones.ActualizarEstado("Disponible", NumeroHabitacion)
+
+            Return "Salida registrada correctamente."
+        Catch ex As Exception
+            Return "Error al registrar la salida: " & ex.Message
+        End Try
+    End Function
+
+    <WebMethod()>
+    Public Function Registrar_Pago(IDHospedaje As Integer, Monto As Decimal, MetodoPago As String) As String
+        Try
+            Dim adap As New DBTableAdapters.PagosTableAdapter
+            adap.Insert(IDHospedaje, DateTime.Now, Monto, MetodoPago)
+            Return "Pago registrado correctamente."
+        Catch ex As Exception
+            Return "Error al registrar el pago: " & ex.Message
+        End Try
+    End Function
+
+    <WebMethod()>
+    Public Function Consultar_Pagos(IDHospedaje As Integer) As DB.PagosDataTable
+        Dim adap As New DBTableAdapters.PagosTableAdapter
+        Return adap.GetDataByIDHospedaje(IDHospedaje)
+    End Function
+
+    <WebMethod()>
+    Public Function Generar_Factura(IDHospedaje As Integer) As String
+        ' Aquí iría la lógica para generar la factura.
+        ' Por ahora, solo devolveremos un mensaje.
+        Return "Factura generada para el hospedaje " & IDHospedaje.ToString()
     End Function
 
 
