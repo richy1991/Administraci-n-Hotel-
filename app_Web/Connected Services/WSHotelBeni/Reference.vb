@@ -32,12 +32,19 @@ Namespace WSHotelBeni
         <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/Consultar_Cliente", ReplyAction:="*")>  _
         Function Consultar_ClienteAsync(ByVal CI As String) As System.Threading.Tasks.Task(Of DB.VClienteDataTable)
         
-        <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/Havitaciones_Disponibles", ReplyAction:="*"),  _
+        <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/Habitaciones_Disponibles", ReplyAction:="*"),  _
          System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults:=true)>  _
-        Function Havitaciones_Disponibles() As DB.vHabitacionesDataTable
+        Function Habitaciones_Disponibles() As DB.vHabitacionesDataTable
         
-        <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/Havitaciones_Disponibles", ReplyAction:="*")>  _
-        Function Havitaciones_DisponiblesAsync() As System.Threading.Tasks.Task(Of DB.vHabitacionesDataTable)
+        <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/Habitaciones_Disponibles", ReplyAction:="*")>  _
+        Function Habitaciones_DisponiblesAsync() As System.Threading.Tasks.Task(Of DB.vHabitacionesDataTable)
+
+        <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/Registrar_Hospedaje", ReplyAction:="*"),  _
+         System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults:=true)>  _
+        Function Registrar_Hospedaje(ByVal CI As String, ByVal NumeroHabitacion As String, ByVal FechaInicio As Date, ByVal Noches As Integer, ByVal Comentarios As String) As String
+
+        <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/Registrar_Hospedaje", ReplyAction:="*")>  _
+        Function Registrar_HospedajeAsync(ByVal CI As String, ByVal NumeroHabitacion As String, ByVal FechaInicio As Date, ByVal Noches As Integer, ByVal Comentarios As String) As System.Threading.Tasks.Task(Of String)
     End Interface
     
     'Esta definición de tipo ha sido generada por la extensión del importador de esquemas System.Data.Design.TypedDataSetSchemaImporterExtensionFx35.
@@ -2407,12 +2414,20 @@ Namespace WSHotelBeni
             Return MyBase.Channel.Consultar_ClienteAsync(CI)
         End Function
         
-        Public Function Havitaciones_Disponibles() As DB.vHabitacionesDataTable Implements WSHotelBeni.WS_Hotel_BeniSoap.Havitaciones_Disponibles
-            Return MyBase.Channel.Havitaciones_Disponibles
+        Public Function Habitaciones_Disponibles() As DB.vHabitacionesDataTable Implements WSHotelBeni.WS_Hotel_BeniSoap.Habitaciones_Disponibles
+            Return MyBase.Channel.Habitaciones_Disponibles
+        End Function
+
+        Public Function Habitaciones_DisponiblesAsync() As System.Threading.Tasks.Task(Of DB.vHabitacionesDataTable) Implements WSHotelBeni.WS_Hotel_BeniSoap.Habitaciones_DisponiblesAsync
+            Return MyBase.Channel.Habitaciones_DisponiblesAsync
+        End Function
+
+        Public Function Registrar_Hospedaje(ByVal CI As String, ByVal NumeroHabitacion As String, ByVal FechaInicio As Date, ByVal Noches As Integer, ByVal Comentarios As String) As String Implements WSHotelBeni.WS_Hotel_BeniSoap.Registrar_Hospedaje
+            Return MyBase.Channel.Registrar_Hospedaje(CI, NumeroHabitacion, FechaInicio, Noches, Comentarios)
         End Function
         
-        Public Function Havitaciones_DisponiblesAsync() As System.Threading.Tasks.Task(Of DB.vHabitacionesDataTable) Implements WSHotelBeni.WS_Hotel_BeniSoap.Havitaciones_DisponiblesAsync
-            Return MyBase.Channel.Havitaciones_DisponiblesAsync
+        Public Function Registrar_HospedajeAsync(ByVal CI As String, ByVal NumeroHabitacion As String, ByVal FechaInicio As Date, ByVal Noches As Integer, ByVal Comentarios As String) As System.Threading.Tasks.Task(Of String) Implements WSHotelBeni.WS_Hotel_BeniSoap.Registrar_HospedajeAsync
+            Return MyBase.Channel.Registrar_HospedajeAsync(CI, NumeroHabitacion, FechaInicio, Noches, Comentarios)
         End Function
     End Class
 End Namespace
