@@ -23,14 +23,14 @@ Public Class WS_Hotel_Beni
     End Function
 
     <WebMethod()>
-    Public Function Havitaciones_Disponibles() As DB.vHabitacionesDataTable
+    Public Function Habitaciones_Disponibles() As DB.vHabitacionesDataTable
         Dim adah As New DBTableAdapters.vHabitacionesTableAdapter
         Return adah.DevHabDisponible
 
     End Function
 
     <WebMethod()>
-    Public Function Registrar_Hospedaje(CI As String, NumeroHabitacion As String, FechaInicio As DateTime, Noches As Integer) As String
+    Public Function Registrar_Hospedaje(CI As String, NumeroHabitacion As String, FechaInicio As DateTime, Noches As Integer, Comentarios As String) As String
         Try
             ' Validar los parámetros de entrada
             If String.IsNullOrWhiteSpace(CI) Then
@@ -49,7 +49,7 @@ Public Class WS_Hotel_Beni
 
             ' Supongamos que el método "InsertarHospedaje" ya está definido en tu adaptador
             adaptadorReservaciones.InsertarHospedaje(
-                CI, NumeroHabitacion, FechaInicio, fechaFin, 0, "Pendiente", "Ninguna", DateTime.Now)
+                CI, NumeroHabitacion, FechaInicio, fechaFin, 0, "Pendiente", Comentarios, DateTime.Now)
 
             ' Cambiar el estado de la habitación a "Ocupado"
             Dim adaptadorHabitaciones As New DBTableAdapters.HabitacionesTableAdapter
